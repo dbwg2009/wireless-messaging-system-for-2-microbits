@@ -1,6 +1,12 @@
-
 > Open this page at [https://dbwg2009.github.io/wireless-messaging-system-for-2-microbits/](https://dbwg2009.github.io/wireless-messaging-system-for-2-microbits/)
 
+# Wireless Messaging System For Microbits
+This Is A System That Allows For Messaging Between 2 Or More Micro:Bits
+
+It uses a list of premade messages that the user can choose from to send.
+> A List Of Messages Can Be Found [Here](https://google.com/) 
+
+#### Press Pin 1 to enter sending mode, press A to choose a message, press B to lock it in and press A to send the message.
 ## Use as Extension
 
 This repository can be added as an **extension** in MakeCode.
