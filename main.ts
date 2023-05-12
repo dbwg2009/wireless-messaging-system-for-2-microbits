@@ -9,10 +9,10 @@ function pin_1_pressed () {
     p0_pressed = 1
     send_message_number = -1
     ScrolText.showString(
-    "choose your message using A, then press B",
+    "choose your message using A, then press B, Then A To Send",
     SCROLL_DIR.LEFT,
     SCROLL_ROTATE.SR_0,
-    80
+    70
     )
 }
 input.onButtonPressed(Button.A, function () {
@@ -20,28 +20,17 @@ input.onButtonPressed(Button.A, function () {
 })
 function sendable_messages_list (text_num: number) {
     if (text_num == 0) {
-        p0_pressed = 0
-        a_button = 1
-        send_messages = 0
-        send_message_number = -1
-        basic.showString("Hello")
-        basic.pause(100)
+        Message_to_send("Hello")
+        send_messages = text_num
     } else if (text_num == 1) {
-        p0_pressed = 0
-        a_button = 1
-        send_messages = 1
-        send_message_number = -1
-        basic.showString("goodbye")
-        basic.pause(100)
+        Message_to_send("Goodbye")
+        send_messages = text_num
     } else if (text_num == 2) {
-        p0_pressed = 0
-        a_button = 1
-        send_messages = 1
-        send_message_number = -1
-        basic.showString("how are you?")
-        basic.pause(100)
-    } else if (text_num == 2) {
-    	
+        Message_to_send("How Are You?")
+        send_messages = text_num
+    } else if (text_num == 3) {
+        Message_to_send("Good")
+        send_messages = text_num
     } else {
     	
     }
@@ -69,6 +58,13 @@ function button_A_pressed () {
 input.onPinPressed(TouchPin.P2, function () {
     control.reset()
 })
+function Message_to_send (Message: string) {
+    p0_pressed = 0
+    a_button = 1
+    send_message_number = -1
+    basic.showString(Message)
+    basic.pause(100)
+}
 input.onButtonPressed(Button.B, function () {
     button_b_pressed()
 })
@@ -83,10 +79,6 @@ function button_b_pressed () {
     }
 }
 function recieve (received_number: number) {
-    for (let index = 0; index < 4; index++) {
-        music.playMelody("E F G F B A D C ", 500)
-    }
-    music.playTone(988, music.beat(BeatFraction.Breve))
     basic.showLeds(`
         . . . . #
         # . . # #
@@ -94,6 +86,10 @@ function recieve (received_number: number) {
         # . . # .
         # . . # .
         `)
+    for (let index = 0; index < 4; index++) {
+        music.playMelody("E F G F B A D C ", 500)
+    }
+    music.playTone(988, music.beat(BeatFraction.Breve))
     basic.clearScreen()
     if (received_number == 0) {
         basic.showString("Hello")
@@ -101,12 +97,14 @@ function recieve (received_number: number) {
         basic.showString("goodbye")
     } else if (received_number == 2) {
         basic.showString("how are you?")
+    } else if (received_number == 3) {
+        basic.showString("Good")
     } else {
     	
     }
 }
-let send_messages = 0
 let a_button = 0
+let send_messages = 0
 let p0_pressed = 0
 let send_message_number = 0
 radio.setGroup(158)
