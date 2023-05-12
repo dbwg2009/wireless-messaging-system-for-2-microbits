@@ -4,7 +4,10 @@
 This Is A System That Allows For Messaging Between 2 Or More Micro:Bits
 
 It uses a list of premade messages that the user can choose from to send.
-> A List Of Messages Can Be Found [Here](https://google.com/) 
+
+![A list of messages](https://github.com/dbwg2009/wireless-messaging-system-for-2-microbits/raw/master/.github/makecode/Screenshot%202023-05-12%2014.22.29.png)
+
+> A List Of Messages Can Also Be Found [Here](https://github.com/dbwg2009/wireless-messaging-system-for-2-microbits/raw/master/.github/makecode/Wireless%20Messaging%20System%20For%202%20Micro_Bits.xlsx)
 
 #### Press Pin 1 to enter sending mode, press A to choose a message, press B to lock it in and press A to send the message.
 ## Use as Extension
