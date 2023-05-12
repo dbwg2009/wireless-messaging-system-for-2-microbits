@@ -1,4 +1,4 @@
-> Open this page at [https://dbwg2009.github.io/wireless-messaging-system-for-2-microbits/](https://dbwg2009.github.io/wireless-messaging-system-for-2-microbits/)
+
 
 # Wireless Messaging System For Microbits
 This Is A System That Allows For Messaging Between 2 Or More Micro:Bits
