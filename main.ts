@@ -19,18 +19,25 @@ input.onButtonPressed(Button.A, function () {
     button_A_pressed()
 })
 function sendable_messages_list (text_num: number) {
+    send_messages = text_num
     if (text_num == 0) {
         Message_to_send("Hello")
-        send_messages = text_num
     } else if (text_num == 1) {
         Message_to_send("Goodbye")
-        send_messages = text_num
     } else if (text_num == 2) {
         Message_to_send("How Are You?")
-        send_messages = text_num
     } else if (text_num == 3) {
+        Message_to_send("Great")
+    } else if (text_num == 4) {
         Message_to_send("Good")
-        send_messages = text_num
+    } else if (text_num == 5) {
+        Message_to_send("Okay")
+    } else if (text_num == 6) {
+        Message_to_send("Bad")
+    } else if (text_num == 7) {
+        Message_to_send("Terrible")
+    } else if (text_num == 8) {
+    	
     } else {
     	
     }
@@ -94,11 +101,19 @@ function recieve (received_number: number) {
     if (received_number == 0) {
         basic.showString("Hello")
     } else if (received_number == 1) {
-        basic.showString("goodbye")
+        basic.showString("Goodbye")
     } else if (received_number == 2) {
-        basic.showString("how are you?")
+        basic.showString("How are you?")
     } else if (received_number == 3) {
+        basic.showString("Great")
+    } else if (received_number == 4) {
         basic.showString("Good")
+    } else if (received_number == 5) {
+        basic.showString("Okay")
+    } else if (received_number == 6) {
+        basic.showString("Bad")
+    } else if (received_number == 7) {
+        basic.showString("Terrible")
     } else {
     	
     }
