@@ -125,3 +125,4 @@ let send_message_number = 0
 radio.setGroup(158)
 send_message_number = -1
 basic.clearScreen()
+radio.sendMessage(RadioMessage.test)
